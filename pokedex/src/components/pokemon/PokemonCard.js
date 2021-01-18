@@ -9,7 +9,7 @@ import spinner from '../pokemon/spinner.gif';
 const Sprite = styled.img`
   width: 2em;
   height: 2em;
-  display: 4em;
+  display: none;
 `;
 
 const Card = styled.div`
