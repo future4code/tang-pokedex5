@@ -7,8 +7,8 @@ import styled from 'styled-components';
 import spinner from '../pokemon/spinner.gif';
 
 const Sprite = styled.img`
-  width: 2em;
-  height: 2em;
+  width: 7em;
+  height: 7em;
   display: none;
 `;
 
@@ -51,7 +51,7 @@ export default class PokemonCard extends Component {
     const { name, url } = this.props;
 
     const pokemonIndex = url.split('/')[url.split('/').length - 2];
-    //const imageUrl = `./sprites/pokemon/${pokemonIndex}.png`;
+    
     const imageUrl = `https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/${pokemonIndex}.png?raw=true`;
 
     this.setState({ name, imageUrl, pokemonIndex });
@@ -66,8 +66,8 @@ export default class PokemonCard extends Component {
             {this.state.imageLoading ? (
               <img
                 src={spinner}
-                style={{ width: '5em', height: '5em' }}
-                className="card-img-top rounded mx-auto d-block mt-5"
+                style={{ width: '3em', height: '3em' }}
+                className="card-img-top rounded mx-auto d-block mt-2"
               />
             ) : null}
             <Sprite
@@ -85,19 +85,21 @@ export default class PokemonCard extends Component {
             />
             {this.state.toManyRequests ? (
               <h6 className="mx-auto">
-                <span className="badge badge-danger mt-2">
-                  To Many Requests
+                <span className="badge badge-danger mt-0">
+                  Aguarde
                 </span>
               </h6>
             ) : null}
             <div className="card-body mx-auto">
-              <h6 className="card-title">
+              <h5 className="card-title">
                 {this.state.name
                   .toLowerCase()
                   .split(' ')
                   .map(s => s.charAt(0).toUpperCase() + s.substring(1))
                   .join(' ')}
-              </h6>
+                  
+              </h5>
+              
             </div>
           </Card>
         </StyledLink>
