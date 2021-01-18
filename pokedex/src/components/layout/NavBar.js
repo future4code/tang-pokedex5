@@ -10,11 +10,7 @@ const Branding = styled.a`
   -o-user-select: none;
 `;
 
-const Logo = styled.img`
-  height: 30px;
-  width: 30px;
-  margin-right: 0.5em;
-`;
+
 
 export default class NavBar extends Component {
   state = {
@@ -56,7 +52,7 @@ export default class NavBar extends Component {
           href="#"
           className="navbar-brand col-sm-3 col-md-2 mr-0 align-items-center"
         >
-          <Logo src="./logo.svg" />
+         
           PokeDex
         </Branding>
       </nav>
