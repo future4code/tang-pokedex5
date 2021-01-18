@@ -8,7 +8,7 @@ import spinner from '../pokemon/spinner.gif';
 
 const Sprite = styled.img`
   width: 5em;
-  height: 5em;
+  height: 10em;
   display: none;
 `;
 
